@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Form</title>
+</head>
+
+<body style=" text-align: -webkit-center; " background ="https://wallpapercave.com/wp/wp2686809.jpg" >
+<h1 style=" color: antiquewhite;">Update Player</h1>
+<br />
+<br />
+
+<form action="#" th:action="@{/saveplayer/} + ${{updatePlayer.id}}"  style=" font-size: 32px; color: white; " th:object="${updatePlayer}" method="post">
+    <label for="name">Name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name" pattern="[A-Za-z ]+" title="Enter only letters" required>
+    
+    <label for="role">Role</label>
+    <input type="text" th:field="*{role}" id="role" placeholder="Role" pattern="[A-Za-z- ]+" title="Enter only letters" required>
+    
+    <button style="background-color: DodgerBlue; cursor: grab; color: white; padding: 14px 10px; font-size: 12px;">
+						Update</button>  
+	 
+</form>
+
+</body>
+</html>

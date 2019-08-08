@@ -1,0 +1,7 @@
+---
+applications:
+- name: Grocery
+  memory: 912M
+  path: target\Groceries-0.0.1-SNAPSHOT
+  instances: 1
+  random-route: true

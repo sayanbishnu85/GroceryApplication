@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Groceries</title>
+</head>
+<body style=" text-align: -webkit-center; " background ="https://wallpapercave.com/wp/wp2686809.jpg" >
+	<h1 style=" color: antiquewhite; ">Add Groceries</h1>
+	<br />
+	<br />
+
+	<form method="post" action="/addGrocery" style=" font-size: 32px; color: white; ">
+		<table border="1">
+			<tr>
+				<td align="right">Id:</td>
+				<td align="left"><input type="number" name="id"  placeholder="ID"
+					size="50" min=1  required></input></td>
+			</tr>
+			<tr>
+				<td align="right">Name:</td>
+				<td align="left"><input type="text" name="name" size="50" placeholder="Name" pattern="[A-Za-z ]+" title="Enter only letters"
+					required></input></td>
+			</tr>
+			<tr>
+				<td align="right">Type:</td>
+				<td align="left"><input type="text" name="role" size="50"  placeholder="Role" pattern="[A-Za-z- ]+" title="Enter only letters"
+					required></input></td>
+			</tr>
+			<tr>
+				<td align="right"></td>
+				<td align="left">
+				  <button style="background-color: SlateBlue; cursor: grab; color: white; padding: 14px 10px; font-size: 12px;">
+						Submit
+			       </button>
+			      
+			    </td>
+			</tr>
+		</table>
+	</form>
+	
+
+</body>
+</html>

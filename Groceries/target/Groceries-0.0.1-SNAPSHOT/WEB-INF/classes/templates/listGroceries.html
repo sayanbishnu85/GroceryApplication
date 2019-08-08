@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>List Of Players</title>
+</head>
+<body  style="text-align:center "  background ="https://wallpapercave.com/wp/wp2686809.jpg" >
+<h1 style=" color: antiquewhite; ">Grocery List</h1>
+<div>
+<h3 style=" color: antiquewhite; ">Click Image to add Groceries</h3>
+ <img style=" cursor: grab; width: auto; height: 55px; " onclick="window.location.href = '/addGrocerypage'" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpMOl25fqks9ISY6pxoPHSxhDCXdxOb4eym7N9ohiEpjTQXnQTLA" alt="Add" width="50" height="50">
+ 
+</div>
+
+
+<br>
+<br>
+  <div style="display:grid"   th:unless="${#lists.isEmpty(grocery)}">    
+
+        <table th:if="${ not #lists.isEmpty(grocery) }" style="font-weight: bold; color:white;font-size: 18px;" >
+        <tr >
+            <td>ID</td>
+            <td>Name</td>
+            <td>Role</td>
+            <td>Delete</td>
+            <td>Edit</td>
+        </tr>
+        <tr th:each="grocery : ${grocery}">
+            <td th:text="${grocery.id}"></td>
+            <td th:text="${grocery.name}"></td>
+            <td th:text="${grocery.type}"></td>
+            <td>             
+            <form  th:action="@{/deleteGrocery/} + ${{grocery.id}}" method="get">
+  					<button type="submit" style="background-color: red; cursor: grab; color: white; padding: 14px 10px; font-size: 12px;" >Delete</button>
+				</form>
+            </td>
+            <td>             
+            <form action= "#" th:action="@{/updateGrocery/} + ${{grocery.id}}" method="get">
+  					<button type="submit" style="background-color: green; color: white; cursor: grab; padding: 14px 10px; font-size: 12px;" >Update</button>
+				</form>
+            </td>
+        </tr>
+    </table>
+  </div>
+</body>
+</html>

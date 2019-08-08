@@ -1,0 +1,1 @@
+insert into Grocery values(44,'Pizza','fast-food');
