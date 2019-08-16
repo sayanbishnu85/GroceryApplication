@@ -2,7 +2,7 @@
 # Build, test, and deploy with Apache Maven- task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml' 
-    goals: 'package' # Optional
+    goals: 'package' 
     options: # Optional
     publishJUnitResults: true 
     testResultsFiles: '**/surefire-reports/TEST-*.xml' # Required when publishJUnitResults == True
